@@ -1,24 +1,42 @@
 "use strict";
 
-let num = 50;
+let num = 20;
 
-while (num <= 55) {
+function showFirstMessage(text) {
+    console.log(text);
     console.log(num);
-    num++;
 }
 
-do {
-    console.log(num);
-    num--;
-} while (num >= 45);
+showFirstMessage('Hello World');
+console.log(num);
 
-for (let i = 1; i < 10; i++) {
-    // if (num == 53) {
-    //     break;
-    // }
-    if (i === 2) {
-       continue;
-    }
+// Замыкание функции это сама функция со всеми внешними переменными, которые ей доступны.
 
-    console.log(i);
+// function calc(a, b) {
+//     return (a + b);
+// }
+
+// console.log(calc(4, 3));
+// console.log(calc(5, 6));
+// console.log(calc(10, 6));
+
+function ret() {
+    let num = 50;
+    return num;
 }
+
+const anotherNum = ret ();
+console.log(anotherNum);
+
+const logger = function() {
+    console.log('Hello');
+};
+
+logger();
+
+const calc = (a, b) => { 
+    console.log('1');
+    return a + b; 
+};
+
+calc(5,12);

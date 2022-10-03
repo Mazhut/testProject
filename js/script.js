@@ -1,42 +1,35 @@
 "use strict";
 
-let num = 20;
+const str = 'Test';
 
-function showFirstMessage(text) {
-    console.log(text);
-    console.log(num);
-}
+console.log(str[2] = 'd');
 
-showFirstMessage('Hello World');
-console.log(num);
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(str);
 
-// Замыкание функции это сама функция со всеми внешними переменными, которые ей доступны.
+const fruit = 'Some fruit';
 
-// function calc(a, b) {
-//     return (a + b);
-// }
+console.log(fruit.indexOf('q'));
 
-// console.log(calc(4, 3));
-// console.log(calc(5, 6));
-// console.log(calc(10, 6));
+const logg = 'Hello world';
 
-function ret() {
-    let num = 50;
-    return num;
-}
+console.log(logg.slice(6));
 
-const anotherNum = ret ();
-console.log(anotherNum);
+console.log(logg.substring(6));
 
-const logger = function() {
-    console.log('Hello');
-};
+console.log(logg.substr(7));
 
-logger();
+const wrestler = 'Big Poppa Pump Scott Steiner';
+console.log(wrestler.slice(0, 3));
+console.log(wrestler.slice(4, 9));
+console.log(wrestler.slice(10, 14));
+console.log(wrestler.slice(15, 20));
+console.log(wrestler.slice(21));
 
-const calc = (a, b) => { 
-    console.log('1');
-    return a + b; 
-};
+const num = 12.2;
+console.log(Math.round(num));
 
-calc(5,12);
+const test = '16.2px';
+console.log(parseInt(test));
+console.log(parseFloat(test));

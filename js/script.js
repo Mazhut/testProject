@@ -1,35 +1,30 @@
 "use strict";
 
-const str = 'Test';
+function first() {
+    //Do something
+    setTimeout(function(){
+        console.log(1);
+    }, 500);
+}
 
-console.log(str[2] = 'd');
+function second() {
+    console.log(2);
+}
 
-console.log(str.toUpperCase());
-console.log(str.toLowerCase());
-console.log(str);
+// first();
+// second();
 
-const fruit = 'Some fruit';
+function learnJS(lang, callback) {
+    console.log(`I am learning: ${lang}`);
+    callback();
+}
 
-console.log(fruit.indexOf('q'));
+function done() {
+    console.log('I have finished this task.');
+}
 
-const logg = 'Hello world';
+learnJS('JavaScript', function() {
+    console.log('I have finished this work.');
+});
 
-console.log(logg.slice(6));
-
-console.log(logg.substring(6));
-
-console.log(logg.substr(7));
-
-const wrestler = 'Big Poppa Pump Scott Steiner';
-console.log(wrestler.slice(0, 3));
-console.log(wrestler.slice(4, 9));
-console.log(wrestler.slice(10, 14));
-console.log(wrestler.slice(15, 20));
-console.log(wrestler.slice(21));
-
-const num = 12.2;
-console.log(Math.round(num));
-
-const test = '16.2px';
-console.log(parseInt(test));
-console.log(parseFloat(test));
+learnJS('JavaScript', done);

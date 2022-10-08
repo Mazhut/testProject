@@ -1,68 +1,39 @@
 "use strict";
 
-const options = {
-    name: 'test',
-    width: 1024,
-    height: 1024,
-    colors: {
-        border: 'black',
-        background: 'red'
-    },
-    makeTest: function() {
-        console.log("Test");
-    }
-};
+const arr = [61, 25, 33, 16, 8, 4];
 
-options.makeTest();
+// Quick Sort
+arr.sort(compareNum);
+console.log(arr);
 
-const {border, background} = options.colors;
-console.log(border);
-console.log(background);
+function compareNum(num1, num2) {
+    return num1 - num2;
+}
 
-// console.log(Object.keys(options).length);
+// arr[99] = 15;
+// console.log(arr.length);
 
-// const playerInfo = {
-//     firstName: 'Charles',
-//     lastName: 'DeKetelaare',
-//     jersey: 90,
-//     contractInfo: {
-//         salary: "$2.500.000",
-//         expiryDate: "30.06.2027"
-//     },
-//     age: 21
+// arr.pop();
+
+// console.log(arr);
+
+// arr.push(16);
+
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(`Element #${i+1}: ${arr[i]}`);
+// }
+
+// for (let value of arr) {
+//     console.log(`${value}`)
 // };
 
-// console.log(Object.keys(playerInfo).length);
+// arr.forEach(function(item, i, arr) {
+//     console.log(`${i}: ${item} inside of array ${arr}`);
+// });
 
-// for (let key in playerInfo) {
-//     if (typeof(playerInfo[key]) === 'object') {
-//         for (let i in playerInfo[key]) {
-//             console.log(`Parameter ${i}: ${playerInfo[key][i]}`);
-//         }
-//     } else {
-//         console.log(`Parameter ${key}: ${playerInfo[key]}`);
-//     }
-// }
-
-
-// console.log(options.name);
-
-// delete options.name;
-
-// console.log(options);
-
-// let counter = 0;
-
-// for (let key in options) {
-//     if (typeof(options[key]) === 'object') {
-//         for (let i in options[key]) {
-//             console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
-//             counter++;
-//         }
-//     }else {
-//         console.log(`Свойство ${key} имеет значение ${options[key]}`);
-//         counter++;
-//     }
-// }
-
-// console.log(counter);
+// const str = prompt("", "");
+// const products = str.split(", ");
+// products.sort();
+// console.log(products.join("; "));

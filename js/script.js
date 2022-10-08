@@ -1,39 +1,106 @@
 "use strict";
 
-const arr = [61, 25, 33, 16, 8, 4];
+// let a = 5,
+//     b = a; //По значению
 
-// Quick Sort
-arr.sort(compareNum);
-console.log(arr);
+// b = b + 5;
 
-function compareNum(num1, num2) {
-    return num1 - num2;
-}
+// console.log(b);
+// console.log(a);
 
-// arr[99] = 15;
-// console.log(arr.length);
-
-// arr.pop();
-
-// console.log(arr);
-
-// arr.push(16);
-
-// console.log(arr);
-
-// for (let i = 0; i < arr.length; i++) {
-//     console.log(`Element #${i+1}: ${arr[i]}`);
-// }
-
-// for (let value of arr) {
-//     console.log(`${value}`)
+// const obj = {
+//     a: 5,
+//     b: 1
 // };
 
-// arr.forEach(function(item, i, arr) {
-//     console.log(`${i}: ${item} inside of array ${arr}`);
-// });
+// const copy = obj; //По ссылке
 
-// const str = prompt("", "");
-// const products = str.split(", ");
-// products.sort();
-// console.log(products.join("; "));
+// copy.a = 10;
+
+// console.log(copy);
+// console.log(obj);
+
+// function copy(mainObj) {
+//     let objCopy = {};
+//     let key;
+//     for (key in mainObj) {
+//         objCopy[key] = mainObj[key];
+//     }
+
+//     return objCopy;
+// };
+
+// const numbers = {
+//     a: 2,
+//     b: 5,
+//     c: {
+//         x: 7,
+//         y: 4
+//     }
+// };
+
+// const newNumbers = copy(numbers);
+
+// newNumbers.a = 10;
+// newNumbers.c.x = 10;
+
+// console.log(numbers);
+// console.log(newNumbers);
+
+// const add = {
+//     d: 17,
+//     e: 20
+// };
+
+// console.log(Object.assign(numbers, add));
+// const clone = Object.assign({}, add);
+
+// clone.d = 20;
+
+// console.log(add);
+// console.log(clone);
+
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();
+
+// newArray[1] = 'Hello world!';
+
+// console.log(oldArray);
+// console.log(newArray);
+
+// const video = ['YouTube', 'Vimeo', 'Rutube'],
+//       blogs = ['Wordpress', 'Livejournal', 'Blogger'],
+//       internet = [...video, ...blogs, 'vk', 'facebook'];
+
+//       console.log(internet);
+
+// function log (a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c); 
+// }
+
+// const num = [2, 5, 7];
+
+// log(...num);
+
+// const array = ['a', 'b'];
+
+// const copyArray = [...array];
+
+// array[1] = 'd';
+
+// console.log(array);
+// console.log(copyArray);
+
+// const q = {
+//     one: 1,
+//     two: 2
+// };
+
+// const newObj = {...q};
+
+// newObj.one = 3;
+
+// console.log(q);
+// console.log(newObj);

@@ -1,30 +1,23 @@
 "use strict";
 
-// let str = 'some';
-// let strObj = new String(str);
+function hello() {
+    console.log('Hello world!');
+    debugger; // Native breakpoint
+}
 
-// console.log(typeof(str));
-// console.log(typeof(strObj));
+hello();
 
-// console.dir([1, 2, 3]);
+function hi() {
+    console.log('Say hi!');
+}
 
-const soldier = {
-    health: 400,
-    armor: 100,
-    sayHello: function() {
-        console.log('Hello!');
-    }
-};
+hi();
 
-// const john = {
-//     health: 100
-// }
+const arr = [1, 14, 4, 30, 54],
+      sorted = arr.sort(compareNum);
 
-// john.__proto__ = soldier; // Deprecated way for implementing inheritance from Prototype
+function compareNum(a, b) {
+    return a - b;
+}
 
-// Object.setPrototypeOf(john, soldier); //First object which will inherit from, Second one is from which inheritance takes place
-
-const john = Object.create(soldier); //We are creating new prototpye object John that will inherit from Soldier
-
-// console.log(john.armor);
-john.sayHello();
+console.log(sorted);

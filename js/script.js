@@ -1,54 +1,57 @@
 "use strict";
 
-// To String
-
-//1)
-console.log(typeof(String(null)));
-console.log(typeof(String(4)));
-
-// 2)
-console.log(typeof(5 + ''));
-
-const num = 5;
-console.log("https://www.vk.com/catalog/" + num);
-
-const fontSize = 26 + 'px';
+// 01
+// let x = 5;
+// alert(x++); //answer is 5
 
 
-// To Number
-
-// 1)
-console.log(typeof(Number('16')));
-
-// 2)
-console.log(typeof(+'5'));
-
-// 3)
-console.log(typeof(parseInt('15px',10)));
-
-let answer = +prompt('Hello, what is your name?', '');
+// 02
+// empty array will be transformed into empty string
+// console.log(typeof([] + false - null + true)); // answer is NaN
 
 
-// To Boolean
+// 03
+// let y = 1;
+// let x = y = 2;
+// alert(x); // answer is 2
 
-// 0, '', null, undefined, NaN => transforms to false
-// everything else is true
 
-// 1)
-let switcher = null;
+// 04
+// let x = [] + 1 + 2;
+// console.log(typeof(x)); // answer is string 12
 
-if (switcher) {
-    console.log('Working...');
-}
 
-switcher = 1;
+// 05
+// alert("1265625"[3]); // answer is 5
 
-if (switcher) {
-    console.log('Working...');
-}
 
-// 2)
-console.log(typeof(Boolean(null)));
+// 06
+// console.log(2 && 1 && null && 0 && undefined); // answer is null
+// И запинается на лжи
 
-// 3)
-console.log(typeof(!!'4444'));
+
+// 07
+// console.log(!!( 1 && 2 ) === (1 && 2)); // answer is false
+
+
+// 08
+// alert(null || 2 && 3 || 4); // answer is 3
+// ИЛИ запинается на правде
+
+
+// 09
+// const a = [1, 2, 3];
+// const b = [1, 2, 3];
+// console.log(a == b); // answer is false
+
+
+// 10
+// alert(+'Infinity'); // answer is Infinity
+
+
+// 11
+console.log('Ёжик' > 'Яблоко'); // answer is false (per symbol comparison)
+
+
+// 12
+console.log(0 || "" || 2 || undefined || true || false); // answer is 2 

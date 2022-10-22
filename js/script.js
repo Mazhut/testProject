@@ -1,55 +1,53 @@
 "use strict";
 
-const box = document.getElementById('box'),
-      btns = document.getElementsByTagName('button'),
-      circles = document.getElementsByClassName('circle'),
-      wrapper = document.querySelector('.wrapper'),
-      hearts = wrapper.querySelectorAll('heart'),
-      oneHeart = wrapper.querySelector('.heart');
+const btns = document.querySelectorAll('button');
+const overlay = document.querySelector('.overlay');
 
-// box.style.backgroundColor = 'blue';
-// box.style.width = '500px';
-// const num = 400;
+// btn.onclick = function() {
+//     alert('Click');
+// };
 
-// box.style.cssText = `background-color: blue; width: ${num}px`;
-box.style.cssText = `background-color: blue; width: 500px`;
+// btn.onclick = function() {
+//     alert('Second click');
+// };
 
-btns[1].style.borderRadius = '100%';
-circles[0].style.backgroundColor = 'red';
+// const deleteElement = (e) => {
+//     e.target.remove();
+// }; 
 
-// for (let i = 0; i < circles.length; i++) {
-//     circles[i].style.backgroundColor = 'purple';
-// }
-hearts.forEach(item => { 
-    item.style.backgroundColor = 'green';
+// btn.addEventListener('mouseenter', (e, ) => {
+//     console.log(e.target);
+//     e.target.remove();
+//     // alert('Element Hovered');
+// });
+
+
+// btn.addEventListener('mouseleave', () => {
+//     alert('Element Unhovered');
+// });
+
+let i = 0;
+
+const viewElement = (e) => {
+    console.log(e.currentTarget);
+    console.log(e.type);
+    // i++;
+    // if (i == 1){
+    //     btn.removeEventListener('click', (viewElement));
+    // }
+};
+
+// btn.addEventListener('click', viewElement);
+// overlay.addEventListener('click', viewElement);
+
+btns.forEach(btn => {
+    btn.addEventListener('click', viewElement, {once: true});
+    });
+
+const link = document.querySelector('a');
+
+link.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    console.log(event.target);
 });
-
-const div = document.createElement('div');
-// const text = document.createTextNode('Hello world');
-
-div.classList.add('black');
-
-wrapper.append(div);
-// wrapper.appendChild(div);
-
-// wrapper.prepend(div);
-
-// hearts[0].before(div);
-// hearts[0].after(div);
-
-// wrapper.insertBefore(div, hearts[0]);
-
-// circles[0].remove();
-// wrapper.removeChild(circles[1]);
-
-hearts[0].replaceWith(circles[0]);
-// wrapper.replaceChild(circles[0], hearts[0]);
-
-div.innerHTML = '<h1>Hello world</h1>';
-
-// div.textContent = 'Good night'; //не воспринимает HTML структуру/теги
-
-// div.insertAdjacentHTML("afterend", '<h2>AEW</h2>');
-// div.insertAdjacentHTML("beforebegin", '<h2>AEW</h2>');
-// div.insertAdjacentHTML("afterbegin", '<h2>AEW</h2>');
-// div.insertAdjacentHTML("beforend", '<h2>AEW</h2>');
